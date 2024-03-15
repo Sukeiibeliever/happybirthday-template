@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Happy Birthday</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+            *{
+                transition: all 0.2s ease-in-out;
+            }
+            body{
+                background:#6c63ff;
+                display:grid;
+                place-items:center;
+                height:100vh;
+                margin:0;
+                font-family:"Open Sans",sans-serif;
+                color:#fff;
+            }
+            .card {
+                background:#fdfdfd;
+                border-radius:4px;
+                height:85vh;
+                width:80vw;
+                box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
+                text-align:center;
+                display:flex;
+                flex-direction:column;
+                justify-content:center;
+                align-items:center;
+                padding:1em;
+                overflow:hidden;
+
+            }
+            @media only screen and (min-width:1000px) {
+                .card{
+                        flex-direction: row-reverse;
+
+                   } 
+                   .card img.birthday{
+                    width:100%;
+                    max-width: 50vw;
+                    max-height:unset;
+
+                   }
+                  
+            }
+            @media only screen and (max-height:640px){
+                    .card{
+                        flex-direction: row-reverse;
+
+                    }
+                    .card img.birthday{
+                        width:100%;
+                        max-width:50vw;
+                        max-height:unset;
+            
+                    }
+
+            }
+            img.birthday{
+                max-height:40vh;
+
+            }
+            .text{
+                padding:1em;
+                color:#333;
+
+            }
+            .muted{
+                opacity: 0.8;
+
+            }
+            .space{
+                height:100px;
+
+            }
+            @keyframes fadeIn {
+                from{
+                    opacity:0;
+
+                }
+                to{
+                    opacity:1;
+                }
+            }
+            body.play-music {
+                animation: fadeIn 2s ease-in-out;
+            }
+
+
+        </style>
+       
+    </head>
+    <body>
+        <div class="card">
+            <img src="cake2.png"
+            alt="birthday" class="birthday"/>
+            <div class="text">
+                <h1>Hello Ko yae amyo ta mee lay</h1>
+                <p>
+                    Happy special birthday! Today is the day to celebrate your extraordinary existence. In the journey of life. I am grateful to have you by my side.
+                        <br /><br />
+                        
+                        Bwtween seas, galaxies and moons, I was luck I stepped on the same land, I dreamed under the same stars as you 
+                        <br /><br />
+                        We've traversed oceans of memories, ventured through galaxies of experiences, and basked beneath the beauty if moons together. I feel incredibly fortunate to share unforgettable adventures with you.
+                        <br /><br />
+                        Every step we take together is a part of the journey that shapes ouur unique story. Your smile illuminates each day, adding warmth to the surroundings.
+                        <br /><br />
+                        May this year be a chapter filled with happiness, success, and love. Thank you for being a part of my life'story. Happy birthday, and may each of your days be filled with extraordinary joy and achievement!🎉🎁🎂
+                        
+                        
+                    
+                </p>
+                <p class="muted">-From Henry-</p>
+
+            </div>
+            <div class="space"></div>
+            <audio controls autoplay>
+                Your broswer does not support the audio element.
+                <source src="hbd.mp3" type="audio/mp3">
+            </audio>
+            <script>
+                const audio = document.getElementById('audio');
+                audio.addEventListener('play', () => { 
+                    document.body.classList.add('play-music'); 
+                });
+                audio.addEventListener('pause', () => { 
+                    document.body.classList.remove('play-music'); 
+                });
+                
+            </script>
+        </div>
+        
+    </body>
+</html>
